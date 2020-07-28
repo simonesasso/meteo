@@ -1,0 +1,179 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style-type: none;
+}
+/* NAVBAR ---------------------------------*/
+.mynavbar{
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid dodgerblue;
+  background-color: #F0F8FF;
+}
+.navbar-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: dodgerblue;
+}
+.algolia-places{
+  width: 78%;
+  margin: 0 5px;
+}
+
+#search-icon:hover{
+  color: blue;
+  cursor: pointer;
+}
+svg{
+  display: none;
+}
+/* MAIN ---------------------------------------*/
+.main{
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:  0 5%;
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  background: rgb(255,255,255);
+  background: linear-gradient(126deg, rgba(255,255,255,1) 0%, rgba(30,144,255,1) 0%, rgba(211,233,254,0.9640231092436975) 66%, rgba(240,248,255,1) 95%);
+  z-index: 99;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sun{
+  font-size: 100px;
+  background:-moz-linear-gradient(top, #ff1e1e 0%, #ffa500 100%);
+          background: -webkit-linear-gradient(top, #ff1e1e 0%,#ffa500 100%);
+          background: linear-gradient(to bottom, #ff1e1e 0%,#ffa500 100%);
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+         -webkit-text-fill-color:transparent;
+}
+#rain{
+  font-size: 100px;
+  background:-moz-linear-gradient(top, #000 0%, #00F 100%);
+          background: -webkit-linear-gradient(top, #000 0%,#00F 100%);
+          background: linear-gradient(to bottom, #000 0%,#00F 100%);
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+         -webkit-text-fill-color:transparent;
+}
+#snow{
+  font-size: 100px;
+  color: white;
+}
+#cloud{
+  font-size: 100px;
+  background:-moz-linear-gradient(top, yellow 0%, grey 100%);
+          background: -webkit-linear-gradient(top, yellow 0%,grey 100%);
+          background: linear-gradient(to bottom, yellow 0%,grey 100%);
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+         -webkit-text-fill-color:transparent;
+}
+.container-prev{
+  width: 600px;
+  height: 470px;
+  margin-right: 50px;
+
+  position: relative;
+}
+.days-button-container{
+ height: 60px;
+ display: flex;
+}
+
+.day-button{
+  width: calc(100% / 5);
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.day{
+  display: none;
+}
+
+.row-weather{
+  height: calc(410px / 8);
+  background-color: lightblue;
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  border-top: none;
+  display:
+}
+.weather-icon{
+  height: 50px;
+  width: auto;
+}
+.span-row{
+  display: inline-block;
+  width: calc(550px / 3);
+  text-align: center;
+}
+.inactive-degree{
+  color: white;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.f-degrees{
+  display: none;
+}
+.chevron{
+  width: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+.chevron:hover{
+  font-size: 35px;
+  color: blue;
+}
+.main-row{
+  height: calc(410px / 8);
+  display: flex;
+  align-items: center;
+}
+.second-row{
+  visibility: hidden;
+  height: calc(410px / 8);
+  display: flex;
+  align-items: center;
+}
+.active{
+  display: block;
+  border-color: blue;
+  width: 100%;
+  height:  100%;
+}
+.active-day-button{
+  background-color: dodgerblue;
+  border: 1px solid white;
+  color: white;
+}
+#map-example-container{
+  height: 470px;
+  width: 500px;
+  border: 1px solid dodgerblue;
+}

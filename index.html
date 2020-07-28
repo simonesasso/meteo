@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Meteo</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link fontawesome ------------------------------------------------->
+    <script src="https://kit.fontawesome.com/3226911cfb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="mynavbar">
+      <div class="navbar-div">
+
+        <label for="search">CITY:</label>
+        <input type="text" name="search" value="" id="search-bar">
+        <span id="search-icon"><i class="fas fa-search"></i></span>
+
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-prev">
+        <div class="cover">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+           <div class="carousel-inner">
+             <div class="carousel-item active">
+               <i class="fas fa-cloud-rain" id="rain"></i>
+             </div>
+             <div class="carousel-item">
+               <i class="fas fa-sun" id="sun"></i>
+             </div>
+             <div class="carousel-item">
+               <i class="fas fa-snowflake" id="snow"></i>
+             </div>
+             <div class="carousel-item">
+               <i class="fas fa-cloud-sun" id="cloud"></i>
+             </div>
+           </div>
+        </div>
+
+        </div>
+        <div class="days-button-container">
+          <div class="day-button active-day-button">
+            <h6 class="dayName"></h6>
+            <h6 class="date"></h6>
+          </div>
+          <div class="day-button">
+            <h6 class="dayName"></h6>
+            <h6 class="date"></h6>
+          </div>
+          <div class="day-button">
+            <h6 class="dayName"></h6>
+            <h6 class="date"></h6>
+          </div>
+          <div class="day-button">
+            <h6 class="dayName"></h6>
+            <h6 class="date"></h6>
+          </div>
+          <div class="day-button">
+            <h6 class="dayName"></h6>
+            <h6 class="date"></h6>
+          </div>
+        </div>
+        <div class="days-display-container">
+          <div class="day active">
+            <div id="list1" class="weather-list">
+
+            </div>
+          </div>
+          <div class="day">
+            <div id="list2" class="weather-list">
+
+            </div>
+
+          </div>
+          <div class="day">
+            <div id="list3" class="weather-list">
+
+            </div>
+
+          </div>
+          <div class="day">
+            <div id="list4" class="weather-list">
+
+            </div>
+
+          </div>
+          <div class="day">
+            <div id="list5" class="weather-list">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="map-example-container">
+
+      </div>
+    </div>
+
+    <!-- template handlebar ----------------------------------------------------->
+  <script id="template-lista" type="text/x-handlebars-template">
+
+
+      <div class="row-weather">
+        <div class="main-row">
+
+
+          <span class="span-row"><b>Time:</b> {{ora}}</span>
+          <span class="span-row">
+            <img src={{icon}} alt="icon" class="weather-icon">
+            <span>{{description}}</span>
+          </span>
+          <span class="span-row"><b>Temp:</b><span class="c-degrees"> {{Ctemperatura}}</span><span class="f-degrees"> {{Ftemperatura}}</span> <span class="celsius">°C</span>/<span class="farenheit inactive-degree">°F</span></span>
+          <span class="chevron more">&rsaquo;</span>
+
+
+        </div>
+        <div class="second-row">
+          <span class="span-row"><b>Humidity:</b> {{humidity}}%</span>
+          <span class="span-row"><b>Pressure:</b> {{pressure}} Pa</span>
+          <span class="span-row"><b>Wind:</b> {{speed}} Km/h</span>
+          <span class="chevron back">&lsaquo;</span>
+        </div>
+
+
+
+
+      </div>
+
+
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+    <script src="https://cdn.jsdelivr.net/leaflet/1/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
