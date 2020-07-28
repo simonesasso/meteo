@@ -44,7 +44,7 @@ console.log(data);
         var datei = arrayPrev[i].dt_txt;
 
         var dayi = parseInt(datei.substring(8, 11));
-        console.log(dayi);
+
         if (dayi != day) {
           test = test + 1;
           day = dayi;
@@ -66,11 +66,7 @@ console.log(data);
           arr5.push(arrayPrev[i]);
         }
       }
-      console.log(arr1);
-      console.log(arr2);
-      console.log(arr3);
-      console.log(arr4);
-      console.log(arr5);
+
       printdays();
       printweather(arr1,0);
       printweather(arr2,1);
@@ -109,7 +105,7 @@ function printdays() {
      currentDay += 1;
    }
 
-   console.log(currentDay);
+   
  });
 }
 
@@ -146,7 +142,7 @@ function printweather(arr, test) {
     if (description == "heavy intensity rain") {
       description = "heavy rain";
     }
-    
+
     var humidity = arr[i].main.humidity;
     var pressure = arr[i].main.pressure;
     var speed = arr[i].wind.speed;
@@ -223,8 +219,8 @@ function navDays() {
 
 if ($("#search-bar").length) {
   var placesAutocomplete = places({
-    appId: "plJPU186GFRO",
-    apiKey: "4b8a7e828c6aa71e22fe021b7e8c3cc0",
+    appId: "your appID",
+    apiKey: "your apiKey",
     container: document.querySelector('#search-bar')
   });
 
